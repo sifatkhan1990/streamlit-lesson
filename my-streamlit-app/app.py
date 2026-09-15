@@ -130,7 +130,7 @@ with col_right:
         .rename(columns={"size": "transactions"})
         .sort_values("transactions", ascending=False)
     )
-    fig_flat = px.bar(tx_by_flat, x="flat_type", y="transactions")
+    fig_flat = px.bar(tx_by_flat, x="flat_type", y="transactions", color_discrete_sequence=["green"])
     st.plotly_chart(fig_flat, width="stretch")
 
 
